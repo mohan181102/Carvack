@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import "./Header.css";
+import Image from "next/image";
 
 export const Header = () => {
   const navigation = [
@@ -23,18 +24,20 @@ export const Header = () => {
     <>
       <div className="nav">
         <Link className="link" href={"/"}>
-          logo
+          <Image
+            width={60}
+            height={60}
+            src={
+              "https://www.carvach.com/images/landing_page/api-management.svg"
+            }
+          />
         </Link>
         <ul className="ul-for-nav">
           {navigation.map((item, index) => {
             return (
               <>
                 <li className="ul-li" key={index}>
-                  <Link
-                    className="link"
-                    key={index + "ass"}
-                    href={`${item.navigate}`}
-                  >
+                  <Link className="link" href={`${item.navigate}`}>
                     {item.name}
                   </Link>
                 </li>
