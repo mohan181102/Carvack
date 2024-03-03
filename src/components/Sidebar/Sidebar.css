@@ -1,0 +1,98 @@
+.aside{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(46, 46, 205);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+}
+
+.sidebar-input{
+    width: 90%;
+    height: 40px;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    padding-left: 5px;
+    font-size: medium;
+    font-weight: 500;
+    color: gray;
+}
+
+.mobile-sidebar{
+    width: 100%;
+    position: absolute;
+
+}
+
+.btn-responsive{
+    display: none;
+    /* background-color: blue; */
+}
+
+@media screen and (max-width:600px) {
+    .aside{
+        width: 0px;
+        z-index: 10;
+        transition: all 200ms;
+    }
+    .sidebar-input{
+        display: none;
+
+    }
+    .btn-responsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 0.5rem;
+        background-color: blue;
+        color: white;
+        position: fixed;
+        outline: none;
+        border: none;
+        bottom: 10%;
+        left: 20px;
+        z-index: 20;
+    }
+    .change-css{
+        background-color: #fff;
+        color: blue;
+        transition: all 200ms;
+    }
+}
+
+/* make responsive for tablet */
+
+@media screen and (max-width:1024px) {
+    .aside{
+        width: 0px;
+        z-index: 10;
+        transition: all 200ms;
+        position: absolute;
+        bottom: 0px;
+    }
+    .sidebar-input{
+        display: none;
+
+    }
+    .btn-responsive{
+        display: block;
+        width: 60px;
+        height: 40px;
+        border-radius: 0.5rem;
+        background-color: blue;
+        color: white;
+        position: fixed;
+        outline: none;
+        border: none;
+        bottom: 10%;
+        left: 20px;
+        z-index: 20;
+    }
+    .change-css{
+        background-color: blue;
+        color: white;
+        transition: all 200ms;
+    }
+}
